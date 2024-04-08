@@ -1,0 +1,14 @@
+<mat-card class="user-card">
+  <h2>{{ user.name }}</h2>
+  <span>{{ user.username }}</span>
+  <span>{{ user.email }}</span>
+
+  <div class="row">
+    <button mat-flat-button color="primary" (click)="onDeleteUser(user)">
+      Удалить
+    </button>
+    <button mat-stroked-button color="primary" (click)="onEditUser(user)">
+      Изменить
+    </button>
+  </div>
+</mat-card>

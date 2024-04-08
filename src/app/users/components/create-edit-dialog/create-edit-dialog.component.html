@@ -1,0 +1,26 @@
+<button mat-icon-button matDialogClose class="closeIcon">
+  <mat-icon>close</mat-icon>
+</button>
+
+<mat-dialog-content>
+  <h1>{{ data.isEdit ? "Изменить" : "Создать" }}</h1>
+
+  <form class="form" [formGroup]="dialogForm">
+    <mat-form-field>
+      <mat-label>Имя</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Фамилия</mat-label>
+      <input matInput formControlName="username" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Почта</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" (click)="onClick()" matDialogClose>
+      {{ data.isEdit ? "Сохранить" : "Создать" }}
+    </button>
+  </form>
+</mat-dialog-content>
